@@ -2,69 +2,69 @@ export const employees = [
     {
         name: "Håkon Hårbunn",
         position: "Hair Developer",
-        image: "Haakon.jpg"
+        img: "Haakon.jpg"
     },
     {
         name: "Lasse Lusetruse",
         position: "Leece Developer",
-        image: "Lasse.jpg"
+        img: "Lasse.jpg"
     },
     {
         name: "Mathias Maskulin",
         position: "Muscle Developer",
-        image: "Mathias.jpg"
+        img: "Mathias.jpg"
     },
     {
         name: "Eirik Englehår",
         position: "Hair Developer",
-        image: "Eirik.jpg"
+        img: "Eirik.jpg"
     },
     {
         name: "Martin Musefelle",
         position: "Mouse Developer",
-        image: "Martin.jpg"
+        img: "Martin.jpg"
     }
 ]
 
 export const projects = [
     {
-        pName: "Project 1",
-        pDesc: "Some stuff",
-        pImg: "p1.jpg"
+        name: "Fix Mainframe",
+        status: true,
+        img: `p${Math.floor(Math.random() * 8) + 1}.jpg`
     },
     {
-        pName: "Project 2",
-        pDesc: "Some stuff",
-        pImg: "p2.jpg"
+        name: "Fix Folder system",
+        status: false,
+        img: `p${Math.floor(Math.random() * 8) + 1}.jpg`
     },
     {
-        pName: "Project 3",
-        pDesc: "Some stuff",
-        pImg: "p3.jpg"
+        name: "Compute data",
+        status: true,
+        img: `p${Math.floor(Math.random() * 8) + 1}.jpg`
     },
     {
-        pName: "Project 4",
-        pDesc: "Some stuff",
-        pImg: "p4.jpg"
+        name: "Divide by 0",
+        status: true,
+        img: `p${Math.floor(Math.random() * 8) + 1}.jpg`
     },
     {
-        pName: "Project 5",
-        pDesc: "Some stuff",
-        pImg: "p5.jpg"
+        name: "Remove comments",
+        status: false,
+        img: `p${Math.floor(Math.random() * 8) + 1}.jpg`
     },
     {
-        pName: "Project 6",
-        pDesc: "Some stuff",
-        pImg: "p6.jpg"
+        name: "Escape earth",
+        status: false,
+        img: `p${Math.floor(Math.random() * 8) + 1}.jpg`
     },
     {
-        pName: "Project 7",
-        pDesc: "Some stuff",
-        pImg: "p7.jpg"
+        name: "Create graph",
+        status: true,
+        img: `p${Math.floor(Math.random() * 8) + 1}.jpg`
     },
     {
-        pName: "Project 8",
-        pDesc: "Some stuff",
-        pImg: "p8.jpg"
+        name: "Look at this graph",
+        status: true,
+        img: `p${Math.floor(Math.random() * 8) + 1}.jpg`
     }
 ]

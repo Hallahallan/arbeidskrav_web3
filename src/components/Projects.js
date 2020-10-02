@@ -59,7 +59,6 @@ export const Projects = () => {
                     </Card>
                 ))}
 
-
                 <React.Fragment>
                     <Button variant="light" className="m-2" style={{width: '12rem', height: 'auto', minHeight: '18rem'}}
                             onClick={handleShow}>

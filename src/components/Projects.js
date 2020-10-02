@@ -7,8 +7,10 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Container from "react-bootstrap/Container";
 import {EmployeeList} from "../utilities";
+import {ProjectModals} from "./ProjectModals";
 
 export const Projects = () => {
+    const [index, setIndex] = useState(0);
     const [show, setShow] = useState(false);
     const [showProject, setShowProject] = useState(false);
     const [employeeName, setEmployeeName] = useState(employees[0].name);
@@ -27,14 +29,14 @@ export const Projects = () => {
         handleClose();
     };
 
-
     return (
         <Container>
+            <ProjectModals open={showProject} handleProject={handleProject} projectName={projects[index].name} projectImg={projects[index].img}/>
             <h1 className="mx-auto">Projects</h1>
 
             <Row className="mb-3 mx-auto">
                 {projects.map((p, index) => (
-                    <Card className="m-2" key={index} style={{width: '12rem'}} onClick={handleProject}>
+                    <Card className="m-2" key={index} style={{width: '12rem'}} onClick={ () => {setIndex(index); handleProject()} }>
                         <Card.Img src={p.img} variant="top" className="border-bottom border-light" style={{objectFit: 'cover', height: '200px'}}/>
                         <Card.Body>
                             <Card.Title>{p.name}</Card.Title>
@@ -43,19 +45,6 @@ export const Projects = () => {
                             <Card.Text
                                 className={p.status ? 'text-success' : 'text-danger'}>{p.status ? 'Active' : 'Not active'}</Card.Text>
                         </Card.Footer>
-                        {/*LASSE HELP PLZ*/}
-                        {/*<Modal show={showProject} onHide={handleProject}>*/}
-                        {/*    <Modal.Header closeButton>*/}
-                        {/*        <Modal.Title>Project X</Modal.Title>*/}
-                        {/*    </Modal.Header>*/}
-                        {/*    <Modal.Body>*/}
-                        {/*    </Modal.Body>*/}
-                        {/*    <Modal.Footer>*/}
-                        {/*        <Button variant="secondary" onClick={handleProject}>*/}
-                        {/*            Cancel*/}
-                        {/*        </Button>*/}
-                        {/*    </Modal.Footer>*/}
-                        {/*</Modal>*/}
                     </Card>
                 ))}
 
